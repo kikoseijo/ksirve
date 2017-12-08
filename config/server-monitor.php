@@ -9,7 +9,7 @@ return [
      */
     'checks' => [
         'diskspace' => Spatie\ServerMonitor\CheckDefinitions\Diskspace::class,
-        'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
+        // 'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
         'memcached' => Spatie\ServerMonitor\CheckDefinitions\Memcached::class,
         'mysql' => Spatie\ServerMonitor\CheckDefinitions\MySql::class,
     ],
@@ -46,7 +46,7 @@ return [
         ],
 
         'slack' => [
-            'webhook_url' => env('SERVER_MONITOR_SLACK_WEBHOOK_URL'),
+            'webhook_url' => env('SLACK_ENDPOINT'),
         ],
 
         /*
@@ -88,7 +88,7 @@ return [
      * Thresholds for disk space's alert.
      */
     'diskspace_percentage_threshold' => [
-        'warning' => 80,
-        'fail' => 90,
+        'warning' => 60,
+        'fail' => 80,
     ],
 ];
