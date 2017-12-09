@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// 
+//
+// Route::get('/k', function () {
+//     $user = App\User::find(1);
+//     $nofication = new App\Notifications\SlackTest();
+//     $user->notify($nofication);
+//     return 'done';
+// });
